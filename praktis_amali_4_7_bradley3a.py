@@ -1,0 +1,70 @@
+pi=3.142
+def kira_kuboid(tinggi,panjang,lebar):
+    isipadu_kuboid=tinggi*panjang*lebar
+    return isipadu_kuboid
+    
+def kuboid():
+    tinggi=float(input("Masukkan tinggi:"))
+    panjang=float(input("Masukkan panjang:"))
+    lebar=float(input("Masukkan lebar:"))
+    print("Isipadu kuboid=",kira_kuboid(tinggi,panjang,lebar))
+
+def kira_silinder(pi,jejari,tinggi):
+    isipadu_silinder=pi*(jejari**2)*(tinggi)
+    return isipadu_silinder
+
+def silinder():
+    jejari=int(input("Masukkan jejari:"))
+    tinggi=int(input("Masukkan tinggi:"))
+    print("Isipadu silinder=",kira_silinder(pi,jejari,tinggi))
+    
+def kira_kon(pi,jejari,tinggi):
+    isipadu_kon=(1/3)*pi*(jejari**2)*(tinggi)
+    return isipadu_kon
+    
+def kon():
+    jejari=int(input("Masukkan jejari:"))
+    tinggi=int(input("Masukkan tinggi:"))
+    print("Isipadu kon=",kira_kon(pi,jejari,tinggi))
+    
+def kira_sfera(pi,jejari):
+    isipadu_sfera=4/3*pi*(jejari**3)
+    return isipadu_sfera
+
+def sfera():
+    jejari=int(input("Masukkan jejari:"))
+    print("Isipadu sfera=",kira_sfera(pi,jejari))
+    
+ulang=True
+
+while(ulang):
+    print(
+"""
+    *********************************
+        Menu Mengira Isi Isipadu
+    *********************************
+    1.Kuboid
+    2.Silinder
+    3.Kon 
+    4.Sfera 
+    5.Keluar dari program
+    
+""")
+    print("")
+    
+    pilih=int(input("Sila masukkan pilihan anda:"))
+    
+    if(pilih==1):
+        kuboid()
+    elif(pilih==2):
+        silinder()
+    elif(pilih==3):
+        kon()
+    elif(pilih==4):
+        sfera()
+    elif(pilih==5):
+        ulang=False
+        print("Bye Bye")
+        exit
+    else:
+        print("Pilihan tiada dalam senarai")
